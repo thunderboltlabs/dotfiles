@@ -1,0 +1,8 @@
+set show-all-if-ambiguous on                        
+set visible-stats on
+set match-hidden-files off
+set mark-symlinked-directories on
+
+"\e[A":history-search-backward
+"\e[B":history-search-forward
+

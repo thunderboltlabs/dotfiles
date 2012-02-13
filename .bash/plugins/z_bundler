@@ -1,0 +1,7 @@
+# named with a z_ to ensure the path is at the front
+
+alias bi="bundle install"
+alias bu="bundle update"
+
+# The .bin is for gems using Bundler
+export PATH=./bin:./.bin:$PATH

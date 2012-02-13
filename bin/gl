@@ -1,0 +1,22 @@
+#!/bin/bash
+
+pattern=$1
+
+shift
+
+if [ $# == 1 ]; then
+  files="$@"
+else
+  files=.
+fi
+
+grep -ERHnl \
+     --exclude=".*.swp" \
+     --exclude="*.log" \
+     --exclude=".svn/*" \
+     --exclude="*.tmp" \
+     --exclude="*.svn-base" \
+     --color=yes \
+     "$pattern" \
+     $files \
+     2>/dev/null | grep -v .svn

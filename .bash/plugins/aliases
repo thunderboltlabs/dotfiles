@@ -1,0 +1,10 @@
+alias cl="clear"
+alias chmod='chmod -v'
+alias cp='cp -i'
+alias mv='mv -i'
+alias c="cd .."
+alias ftp="ncftp"
+alias ls="ls -ohF"
+
+alias ss="ssh"
+

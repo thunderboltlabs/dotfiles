@@ -1,0 +1,37 @@
+[user]
+  name = Thunderbolt Labs
+  email = pair@thunderboltlabs.com
+[color]
+	status = auto
+	diff   = auto
+	branch = auto
+[alias]
+  new-branch    = !sh -c 'git checkout master && git checkout -tb $1 && git push origin $1 && git branch --set-upstream $1 origin/$1' -
+  remove-branch = !sh -c 'git checkout master && git branch   -D $1 && git push origin :$1' -
+  aa = add .
+  st = status -sb
+  ci = commit -v
+  co = checkout
+  br = branch -av
+  d  = diff --word-diff
+  ql =   log --abbrev-commit --decorate --pretty=format:'%Cred%cn%Creset: %Cred%h%Creset %s %Cblue%ar%Creset' --graph 
+  last = log --abbrev-commit --decorate --pretty=format:'%Cred%cn%Creset: %Cred%h%Creset %s %Cblue%ar%Creset' -n 1
+  conflicts = !git st | grep unmerged: | cut -c 15-
+  modified = ls-files -m
+[merge]
+  tool = opendiff
+  summary = true
+[core]
+  excludesfile = /Users/tsaleh/.gitignore
+  whitespace = trailing-space,space-before-tab
+[status]
+  relativePaths = false
+[apply]
+  whitespace = nowarn
+[branch]
+  autosetupmerge = always
+  autosetuprebase = always
+[git-pair]
+	authors = Tammer Saleh <tammer@thunderboltlabs.com>
+	authors = Randall Thomas <randall@thunderboltlabs.com>
+	authors = Bob Gonsalves <rgonsalves@lingraphica.com>

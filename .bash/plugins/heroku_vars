@@ -1,0 +1,2 @@
+export PORT=3000
+alias fs='foreman start -p $PORT'
