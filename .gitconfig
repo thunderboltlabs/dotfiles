@@ -22,7 +22,7 @@
   tool = opendiff
   summary = true
 [core]
-  excludesfile = /Users/tsaleh/.gitignore
+  excludesfile = /Users/pair/.gitignore
   whitespace = trailing-space,space-before-tab
 [status]
   relativePaths = false
